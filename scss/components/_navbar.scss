@@ -1,0 +1,26 @@
+nav ul{
+    list-style: none;/* para quitar los puntos de la barra*/
+    display: flex;/*la barra ahora es horizontal */
+    justify-content: center;
+}
+nav li{
+    padding-top: 15px;
+    margin: 15px;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-family: "Comfortaa", sans-serif;
+}
+li a{
+    text-decoration: none;
+
+}
+nav a{
+    color: rgb(0, 0, 0);
+    
+}
+
+.main{
+    background-color: black;
+}
