@@ -1,0 +1,40 @@
+/* -----------------CONTACTO.html------------------*/
+
+.formulario{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    padding: 15px;
+}
+.formulario label{
+    font-size: 25px;
+    font-family: "Comfortaa", sans-serif;
+    color: rgb(83, 87, 87);
+}
+.formulario-h2{
+    font-size: 30px;
+    font-family: "Comfortaa", sans-serif;
+}
+.formulario-p{
+    font-size: 23px;
+    font-family: "Comfortaa", sans-serif;
+    color: rgb(83, 87, 87);
+}
+// .formulario input{
+//     height: 25px;
+//     width: fit-content;
+// }
+// form textarea{
+//     height: fit-content;
+//     width: fit-content;
+// }
+// form button{
+//     height: 30px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     background-color: rgb(138, 27, 27);
+//     width: fit-content;
+//     color: rgb(255, 254, 254);
+// }

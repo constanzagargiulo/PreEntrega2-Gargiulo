@@ -1,0 +1,54 @@
+
+
+/* -----------------PROYECTOS.html------------------*/
+
+/* titulos*/
+.proyectos-titulos{
+    font-family: "Quicksand", sans-serif;
+    justify-content: flex-start;
+    font-size: xx-large;
+    padding-left: 10px;
+    background-color: rgb(7, 6, 6);
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+
+}
+
+.casas{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 400px)) ;
+    gap: 20px;
+    justify-content: space-around;
+    background-image: url(../img/white-texture.jpg);
+    padding: 15px;
+}
+
+.casas-img{
+    width: 400px;
+    border-radius: 15px ;
+
+}
+
+.edificios{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 400px)) ;
+    gap: 20px;
+    justify-content: space-around;
+    background-image: url(../img/white-texture.jpg);
+    padding: 15px;
+
+}
+
+.diseño-de-interiores{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 400px)) ;
+    gap: 20px;
+    justify-content: space-around;
+    background-image: url(../img/white-texture.jpg);
+    padding: 15px;
+}
+
+
+.card-img{
+    width: 100px;
+}

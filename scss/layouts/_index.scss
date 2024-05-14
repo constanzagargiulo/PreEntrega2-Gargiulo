@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main div{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+
+
+
+/* INDEX HTML*/
+
+/* header ---------------------------------------*/
+
+/*titulo rmh*/
+
+.barra{ /* mi imput e icono se coloco al lado del logo, la lupa y el buscador */
+    display: flex;
+    justify-content: flex-start; /*corremos la imagen a la izquierda */
+    margin-left: 5px;
+
+    h1{
+    font-family: "Quicksand", sans-serif;
+    padding-top: 25px;
+    }
+}
+
+/*intente borra la class header foto en la linea 47 del index pero no me deja y tampoco encuentro la class */
+header{/* barra de navegacion se quede en el lugar */
+    position: sticky;
+    background-color: white;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 90px;
+    }
+}
+/* foto header */
+
+
+nav ul{
+    list-style: none;/* para quitar los puntos de la barra*/
+    display: flex;/*la barra ahora es horizontal */
+    justify-content: center;
+}
+nav li{
+    padding-top: 15px;
+    margin: 15px;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-family: "Comfortaa", sans-serif;
+}
+li a{
+    text-decoration: none;
+
+}
+nav a{
+    color: rgb(0, 0, 0);
+    
+}
+
+.main{
+    background-color: black;
+}
+
+
+/* BANNER ----------------------------------*/
+.banner{
+    margin: 0px;
+    padding: 0px;
+}
+.banner img{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/*introduccion a rmh*/
+.main-section-container{
+    background-color: black;
+    section{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    p{
+        color: rgb(255, 255, 255);
+        font-size: x-large;
+        line-height: 2;
+        padding-right: 10px;
+        text-align: center;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+    }
+
+}
+/*trate de poner el text-container como p pero no me deja,
+si no lo pongo no me modifica y no entiendo por q no me deja*/
+
+.text-container{
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    line-height: 2;
+    padding-right: 10px;
+    text-align: center;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* banner 2*/
+.figure-banner{
+    display: flex;
+    justify-content: center;
+    
+    img{
+        width: 100%;
+        padding: 0px;
+        margin: -20px;
+        border: 0px;
+    }
+}
+
+
+.nav-link {
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
+
+}
+
+.nav-link:hover {
+    background-color: #ecebeb;
+    color: rgb(255, 251, 251);
+}
+
+.carousel-inner,
+.carousel-item{
+    width: 1000%;
+    height: 840px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* desde renders .. imagen 3d*/
+
+.section-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    justify-content: space-around;
+    padding: 15px;
+    gap: 15px;
+    margin: 0px;
+    background-color: white;
+}
+.section-div div{
+    display: flex;
+    flex-direction: column;
+}
+.section-div-p{
+    font-size: 25px;
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.section-div-titulo{
+    font-size: 28px;
+    font-weight: bold;
+}
+.section-div-imgage{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.section-div-imgage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* CONCURSOS */
+
+
+.concursos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}   
+
+
+.image {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+
+/* footer ----------------------------------------*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: white;
+}
+footer h3{
+    font-family: "Quicksand", sans-serif;
+    padding-top: 25px;
+}
+
+
+footer h4{
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+}
+.contactos{
+    padding: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero{
+    padding: 30px;
+    background-color: rgb(87, 61, 61);
+    h1{
+        color: white;
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
+
+
+
+/*media*/
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+    header{
+        flex-direction: column; 
+    }
+    nav ul{
+        justify-content: space-around;
+    }
+    nav li{
+        padding: 0px;
+        margin: 10px;
+
+    }
+    .img-banner{
+        width: 100%;
+    }
+
+    .titulo-servicios{
+        font-size: 35px;
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width:479px) {
+
+
+    header{
+        flex-direction: column; 
+    }
+
+
+    nav ul{
+        padding: 0px;
+        margin: 2px;
+    }
+    nav li{
+        padding: 0px;
+        margin: 5px;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+
+    .text-container{
+        font-size: 18px;
+    }
+
+    .wide {
+    grid-column: auto;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .concursos-titulo div h2{
+        font-size: 40px;
+    }
+    .img-banner{
+        width: 100%;
+    }
+    .section-div-p{
+        font-size: 20px ;
+        text-align: center;
+    }
+    .section-div-titulo{
+        text-align: center;
+    }
+
+
+    .titulo-servicios{
+        font-size: 30px;
+        text-align: center;
+    }
+    .casas{
+        justify-items: center;
+    }
+    .edificios{
+        justify-items: center;
+    }
+    .diseño-de-interiores{
+        justify-items: center;
+    }
+    .casas-img{
+        width: 250px;
+        
+    }
+}

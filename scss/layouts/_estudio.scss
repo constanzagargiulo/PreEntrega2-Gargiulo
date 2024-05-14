@@ -1,0 +1,120 @@
+/* -----------------ESTUDIO.html------------------*/
+
+/*TITULO*/
+
+/*banner estudio*/
+.estudio-banner{
+    width: 100%;
+}
+.estudio-div{
+    background-color: black;
+    padding: 15px;
+    margin-top: -17px;
+}
+.estudio-h2{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    padding: 15px;
+    font-size: 45px;
+    font-weight: 1000;
+    color: #ffffff;
+}
+
+.estudio{
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.estudio-p{
+    color: white;
+    padding: 25px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 25px;
+    font-style: italic;
+    line-height: 40px;
+}
+
+
+
+
+/* descripcion de cursos*/
+
+/* UX UI*/
+#rectangulos-izquierda{
+    grid-template-columns: 1000px;
+
+    padding-right: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+
+}
+
+.imagen-contenedor-izquierda{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px ;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    border-radius: 25px;
+    
+}
+.imagen-ux-ui{
+    width: 300px;
+    border-radius: 10%;
+    border: solid 2px rgb(17, 17, 17);
+
+}
+.texto-rectangulo-izquierda{
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    color: rgb(0, 0, 0);
+    margin-left: 50px;
+}
+
+/* LUMION-CORONA RENDERING*/
+
+#rectangulos-derecha{
+    grid-template-columns: 1000px;
+    padding-left: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+
+}
+
+.imagen-contenedor-derecha{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    margin: 0px;
+    
+}
+
+.texto-rectangulo-derecha{
+    text-align: right;
+    padding-left: 50px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    color: rgb(26, 25, 25);
+    margin-right: 50px;
+}
+
