@@ -28,6 +28,7 @@ main div{
     padding-top: 17px;
     color: rgb(0, 0, 0);
     }
+
 }
 
 
@@ -66,15 +67,16 @@ header{
     }
     article{
         padding: 10px;
+        transition: 0.5s;
+        &:hover{
+            background-color: rgb(143, 24, 24); /* Fondo rojo en hover */
+            color: white; /* Texto blanco en hover */
+            transition: 1s;
+            border-radius: 15px;
+        }
     }
 }
 
-.main-section-container article:hover {
-    background-color: rgb(143, 24, 24); /* Fondo negro en hover */
-    color: white; /* Texto blanco en hover */
-    transition: 1s;
-    border-radius: 15px;
-}
 
 
 /*renders-diseñoarquitectonico-imagenes*/
@@ -93,11 +95,18 @@ header{
         overflow: hidden;
         object-fit: cover
         
+        
     }
     h2{
         font-size: 28px;
         font-weight: bold;
         text-align: center;
+        transition: 0.5s;
+        &:hover{
+            color: #868383;
+            font-size: 2rem;
+            transition: 1s;
+        }
     }
     p{
         font-size: 25px;
@@ -183,6 +192,11 @@ header{
         border-radius: 10px;
         overflow: hidden;
         object-fit: cover;
+        transition: 0.5s;
+        &:hover{
+            width: 105%;
+            transition: 1s;
+        }
     }
 }   
 
