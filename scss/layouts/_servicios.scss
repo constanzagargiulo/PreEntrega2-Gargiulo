@@ -1,60 +1,64 @@
 /* -----------------SERVICIOS.html------------------*/
 
 
-
-
-.servicios-main{
-    margin-bottom: 25px;
-}
-.titulo-generico{
-    font-family: "Quicksand", sans-serif;
-    justify-content: flex-start;
-    font-size: xx-large;
-    padding-left: 10px;
-    padding-top: 5px;
-    background-color: rgb(7, 6, 6);
-    color: rgb(255, 255, 255);
-    margin-bottom: 100px;
+/* BANNER ----------------------------------*/
+.banner{
+    margin: 0px;
+    padding: 0px;
+    img{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        object-fit: cover;
+    }
 }
 
 
-.servicios{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 20px;
-    gap: 30px;
-}
+.card{
+    h5{
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        font-size: 25px;
+        font-family: "Prata", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: justify;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
 
-.producto {
-    background-color: #ffffff;
-    box-shadow: 5px 5px 0px rgb(155, 155, 155);
-    border-radius: 15px;
 }
-.producto img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 15px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+nav ul{
+    list-style: none;/* para quitar los puntos de la barra*/
+    display: flex;/*la barra ahora es horizontal */
+    justify-content: center;
 }
-.producto h2{
+nav li{
+    padding-top: 15px;
+    margin: 15px;
+    justify-content: center;
+    font-size: large;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 20px;
-    font-style: normal;
-    padding: 10px;
 }
-.producto-body {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+li a{
+    text-decoration: none;
+
+}
+nav a{
+    color: rgb(0, 0, 0);
+    
 }
 
-
-
-
+.main{
+    background-color: black;
+}
 
 
 
