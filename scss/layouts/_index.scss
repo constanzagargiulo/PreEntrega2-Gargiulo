@@ -4,43 +4,10 @@
     box-sizing: border-box;
 }
 
-main div{
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
 
-
-/*titulo rmh*/
-/*carousel*/
 .carousel-inner img {
     object-fit: cover;
 
-}
-
-/*navbar*/
-.barra{ 
-    display: flex;
-    justify-content: flex-start; 
-    margin-left: 5px;
-
-    h1{
-    font-family: "Quicksand", sans-serif;
-    padding-top: 17px;
-    color: rgb(0, 0, 0);
-    }
-
-}
-
-
-header{
-    position: sticky;
-    background-color: white;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    img{
-        width: 90px;
-    }
 }
 
 
@@ -53,6 +20,10 @@ header{
     justify-content: center;
 
     align-items: center;
+    @media (max-width:769px){
+        display: flex;
+        flex-direction: column;
+    }
 
     p{
         flex: 1;
@@ -61,18 +32,34 @@ header{
         text-align: justify;
         font-family: "Comfortaa", sans-serif;
         font-weight: weight;
+        @media (max-width:479px){
+            flex: 1;
+            padding: 0px;
+            font-size: medium;
+            line-height: 1.5;
+            text-align: justify;
+            font-family: "Comfortaa", sans-serif;
+            font-weight: weight;
+            padding: 15px;
+        }
     }
     img{
         width: 400px;
+        @media (max-width:769px){
+            display: none;
+        }
     }
-    article{
+    article {
         padding: 10px;
         transition: 0.5s;
-        &:hover{
-            background-color: rgb(143, 24, 24); /* Fondo rojo en hover */
-            color: white; /* Texto blanco en hover */
-            transition: 1s;
-            border-radius: 15px;
+    
+        @media (min-width: 769px) {
+            &:hover {
+                background-color: rgb(143, 24, 24); 
+                color: white; 
+                transition: 1s;
+                border-radius: 15px;
+            }
         }
     }
 }
@@ -102,10 +89,12 @@ header{
         font-weight: bold;
         text-align: center;
         transition: 0.5s;
-        &:hover{
-            color: #868383;
-            font-size: 2rem;
-            transition: 1s;
+        @media (min-width: 769px){
+            &:hover{
+                color: #868383;
+                font-size: 2rem;
+                transition: 1s;
+            }
         }
     }
     p{
@@ -131,55 +120,7 @@ header{
 
 
 
-// /* banner 2*/
-// .figure-banner{
-//     display: flex;
-//     justify-content: center;
-    
-//     img{
-//         width: 100%;
-//         padding: 0px;
-//         margin: -20px;
-//         border: 0px;
-//     }
-// }
-
-
-// .nav-link {
-//     color: black;
-//     padding: 10px;
-//     transition: 0.5s;
-
-// }
-
-// .nav-link:hover {
-//     background-color: #ecebeb;
-//     color: rgb(255, 251, 251);
-// }
-
-.carousel-inner,
-.carousel-item{
-    width: 100%;
-    height: 840px;
-}
-.carousel-item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
-
-
 /* CONCURSOS */
-
 
 .concursos{
     display: grid;
@@ -193,252 +134,42 @@ header{
         overflow: hidden;
         object-fit: cover;
         transition: 0.5s;
-        &:hover{
-            width: 105%;
-            transition: 1s;
+        @media (min-width: 769px){
+            &:hover{
+                transition: 1s;
+                box-shadow: 15px 15px 15px  lighten(rgb(94, 86, 86), 10%);
+            }
         }
     }
 }   
 
 .logo-concursos{
-    padding-left: 100px;
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.wide {
-    grid-column: span 2;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*media*/
-
-@media (min-width: 480px) and (max-width: 768px) {
-
-    header{
-        flex-direction: column;
-        align-items: center;
-        img{
-            width: 90px;
-        }
-    }
-    nav ul{
-        justify-content: space-around;
-    }
-    nav li{
-        padding: 0px;
-        margin: 10px;
-
-    }
-    .img-banner{
-        width: 100%;
-    }
-
-    .titulo-servicios{
-        font-size: 35px;
+    padding: 5px;
+    h2{
+        color: rgb(0, 0, 0);
         text-align: center;
+        font-size: 3rem;
+        padding-top: 25px;
+        padding-bottom: 5px;
+        font-family: "Comfortaa", sans-serif;
+        font-weight: 700;
     }
-    .main-section-container{
-        display: grid;
-        grid-template-columns: 400px 200px;
-        justify-content: center;
-        align-items: center;
-        p{
-            flex: 1;
-            padding: 0px;
-            font-size: medium;
-            line-height: 2;
-            text-align: justify;
-            font-family: "Comfortaa", sans-serif;
-            font-weight: weight;
-        }
-        img{
-            width: 300px;
-        }
-    }
-    .iconos-fijos {
-        position: fixed; /* Fija el contenedor en la ventana del navegador */
-        bottom: 20px; /* Ajusta la distancia desde abajo */
-        right: 20px; /* Ajusta la distancia desde la derecha */
-        display: flex; /* Para que los elementos se alineen horizontalmente */
-        flex-direction: column; /* Para que los elementos se apilen verticalmente */
-        align-items: flex-end; /* Para alinear los elementos a la derecha */
-        z-index: 999; /* Asegura que esté por encima de otros elementos */
-        a {
-            background-color: #cecaca;
-            padding: 10px;
-            border-radius: 15%;
-            margin-bottom: 10px; /* Espacio entre los iconos */
-            color: #5e5b5b; /* Cambia el color de los iconos */
-            font-size: 20px; /* Tamaño de la fuente de los iconos */
-        }
-    }
-    /* Estilos para los iconos */
-    
-    /* Cambia el color de los iconos al pasar el mouse sobre ellos */
-    .iconos-fijos a:hover {
-        color: #000000;
-        transition: 1s;
-    }
-    
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width:479px) {
-
-
-    header{
-        flex-direction: column;
-        align-items: center;
-        img{
-            width: 90px;
-        }
-    }
-
-    nav ul{
-        padding: 0px;
-        margin: 2px;
-    }
-    nav li{
-        padding: 0px;
-        margin: 5px;
-        font-size: 15px;
-        font-weight: bold;
-
-    }
-
 
     .wide {
     grid-column: auto;
     }
-    footer{
-        flex-direction: column;
-        align-items: center;
-    }
-    .concursos-titulo div h2{
-        font-size: 40px;
-    }
-    .img-banner{
-        width: 100%;
-    }
-    .section-div-p{
-        font-size: 20px ;
-        text-align: center;
-    }
-    .section-div-titulo{
-        text-align: center;
-    }
 
-
-    .titulo-servicios{
-        font-size: 30px;
-        text-align: center;
-    }
-    .casas{
-        justify-items: center;
-    }
-    .edificios{
-        justify-items: center;
-    }
-    .diseño-de-interiores{
-        justify-items: center;
-    }
-    .casas-img{
-        width: 250px;
-        
-    }
-    .main-section-container{
-        display: flex;
-        flex-direction: column;
-        p{
-            flex: 1;
-            padding: 0px;
-            font-size: medium;
-            line-height: 1.5;
-            text-align: justify;
-            font-family: "Comfortaa", sans-serif;
-            font-weight: weight;
-            padding: 15px;
-        }
-        img{
-            display: none;
-        }
-    }
-    .iconos-fijos {
-        position: fixed; /* Fija el contenedor en la ventana del navegador */
-        bottom: 20px; /* Ajusta la distancia desde abajo */
-        right: 20px; /* Ajusta la distancia desde la derecha */
-        display: flex; /* Para que los elementos se alineen horizontalmente */
-        flex-direction: column; /* Para que los elementos se apilen verticalmente */
-        align-items: flex-end; /* Para alinear los elementos a la derecha */
-        z-index: 999; /* Asegura que esté por encima de otros elementos */
-        a {
-            background-color: #cecaca;
-            padding: 10px;
-            border-radius: 15%;
-            margin-bottom: 10px; /* Espacio entre los iconos */
-            color: #5e5b5b; /* Cambia el color de los iconos */
-            font-size: 20px; /* Tamaño de la fuente de los iconos */
-        }
-    }
-    /* Estilos para los iconos */
-    
-    /* Cambia el color de los iconos al pasar el mouse sobre ellos */
-    .iconos-fijos a:hover {
-        color: #000000;
-        transition: 1s;
-    }
 
 }
+
+
+
+
+
+
+
+
+

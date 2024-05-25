@@ -15,12 +15,22 @@
         margin-bottom: 10px; /* Espacio entre los iconos */
         color: #5e5b5b; /* Cambia el color de los iconos */
         font-size: 32px; /* Tamaño de la fuente de los iconos */
-        &:hover{
-            color: #000000;
-            transition: 1s;
-        
+        @media (min-width: 769px){
+            &:hover{
+                color: #000000;
+                transition: 1s;
+            
+            }
+        }
+        @media (max-width:479px){
+            padding: 8px;
+            border-radius: 15%;
+            margin-bottom: 5px; /* Espacio entre los iconos */
+            color: #5e5b5b; /* Cambia el color de los iconos */
+            font-size: 20px; /* Tamaño de la fuente de los iconos */
+            
         }
     }
 }
-/* Estilos para los iconos */
+
 
