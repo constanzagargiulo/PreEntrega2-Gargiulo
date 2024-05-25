@@ -18,13 +18,82 @@
   object-fit: cover;
 }
 
-nav ul {
-  list-style: none; /* para quitar los puntos de la barra*/
-  display: flex; /*la barra ahora es horizontal */
-  justify-content: center;
+.titulo-generico {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 769px) {
+  .titulo-generico {
+    font-size: 2rem;
+  }
 }
 
-nav li {
+.texto-generico {
+  flex: 1;
+  font-size: large;
+  line-height: 2;
+  text-align: justify;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: weight;
+}
+@media (max-width: 479px) {
+  .texto-generico {
+    flex: 1;
+    padding: 0px;
+    font-size: medium;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: weight;
+    padding: 15px;
+  }
+}
+
+header {
+  position: sticky;
+  background-color: white;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header img {
+  width: 90px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  header nav ul {
+    justify-content: center;
+    padding: 0px;
+    margin: 5px;
+    justify-content: center;
+    border: 0px;
+  }
+}
+@media (max-width: 479px) {
+  header nav ul {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+header nav li {
   padding-top: 15px;
   margin: 15px;
   justify-content: center;
@@ -34,26 +103,41 @@ nav li {
   font-family: "Comfortaa", sans-serif;
   transition: 0.5s;
 }
-nav li:hover {
-  color: white;
+@media (min-width: 769px) {
+  header nav li:hover {
+    color: rgb(131, 31, 31);
+  }
 }
-
-li a {
+@media (min-width: 769px) and (min-width: 480px) and (max-width: 768px) {
+  header nav li {
+    padding: 0px;
+    margin: 5px;
+    justify-content: center;
+    border: 0px;
+  }
+}
+header li a {
   text-decoration: none;
   transition: 0.5s;
 }
-li a:hover {
-  background-color: rgb(87, 87, 87);
-  color: rgb(248, 248, 248);
-  transition: 0.2s;
+@media (min-width: 769px) {
+  header li a:hover {
+    color: rgb(248, 248, 248);
+    transition: 0.2s;
+  }
 }
-
-nav a {
+header nav a {
   color: rgb(0, 0, 0);
 }
-
-.main {
-  background-color: black;
+header .barra {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+header .barra h1 {
+  font-family: "Quicksand", sans-serif;
+  padding-top: 17px;
+  color: rgb(0, 0, 0);
 }
 
 /* footer*/
@@ -74,50 +158,30 @@ nav a {
   color: #5e5b5b; /* Cambia el color de los iconos */
   font-size: 32px; /* Tamaño de la fuente de los iconos */
 }
-.iconos-fijos a:hover {
-  color: #000000;
-  transition: 1s;
+@media (min-width: 769px) {
+  .iconos-fijos a:hover {
+    color: #000000;
+    transition: 1s;
+  }
+}
+@media (max-width: 479px) {
+  .iconos-fijos a {
+    padding: 8px;
+    border-radius: 15%;
+    margin-bottom: 5px; /* Espacio entre los iconos */
+    color: #5e5b5b; /* Cambia el color de los iconos */
+    font-size: 20px; /* Tamaño de la fuente de los iconos */
+  }
 }
 
-/* Estilos para los iconos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-main div {
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
-
-/*titulo rmh*/
-/*carousel*/
 .carousel-inner img {
   object-fit: cover;
-}
-
-/*navbar*/
-.barra {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 5px;
-}
-.barra h1 {
-  font-family: "Quicksand", sans-serif;
-  padding-top: 17px;
-  color: rgb(0, 0, 0);
-}
-
-header {
-  position: sticky;
-  background-color: white;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-}
-header img {
-  width: 90px;
 }
 
 /*introduccion a rmh*/
@@ -127,6 +191,12 @@ header img {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 769px) {
+  .main-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main-section-container p {
   flex: 1;
   font-size: large;
@@ -135,18 +205,37 @@ header img {
   font-family: "Comfortaa", sans-serif;
   font-weight: weight;
 }
+@media (max-width: 479px) {
+  .main-section-container p {
+    flex: 1;
+    padding: 0px;
+    font-size: medium;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: weight;
+    padding: 15px;
+  }
+}
 .main-section-container img {
   width: 400px;
+}
+@media (max-width: 769px) {
+  .main-section-container img {
+    display: none;
+  }
 }
 .main-section-container article {
   padding: 10px;
   transition: 0.5s;
 }
-.main-section-container article:hover {
-  background-color: rgb(143, 24, 24); /* Fondo rojo en hover */
-  color: white; /* Texto blanco en hover */
-  transition: 1s;
-  border-radius: 15px;
+@media (min-width: 769px) {
+  .main-section-container article:hover {
+    background-color: rgb(143, 24, 24);
+    color: white;
+    transition: 1s;
+    border-radius: 15px;
+  }
 }
 
 /*renders-diseñoarquitectonico-imagenes*/
@@ -172,10 +261,12 @@ header img {
   text-align: center;
   transition: 0.5s;
 }
-.section-div h2:hover {
-  color: #868383;
-  font-size: 2rem;
-  transition: 1s;
+@media (min-width: 769px) {
+  .section-div h2:hover {
+    color: #868383;
+    font-size: 2rem;
+    transition: 1s;
+  }
 }
 .section-div p {
   font-size: 25px;
@@ -197,18 +288,6 @@ header img {
   object-fit: cover;
 }
 
-.carousel-inner,
-.carousel-item {
-  width: 100%;
-  height: 840px;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* CONCURSOS */
 .concursos {
   display: grid;
@@ -224,183 +303,29 @@ header img {
   object-fit: cover;
   transition: 0.5s;
 }
-.concursos img:hover {
-  width: 105%;
-  transition: 1s;
+@media (min-width: 769px) {
+  .concursos img:hover {
+    transition: 1s;
+    box-shadow: 15px 15px 15px #796e6e;
+  }
 }
 
 .logo-concursos {
-  padding-left: 100px;
+  padding: 5px;
+}
+.logo-concursos h2 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
 }
 
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.wide {
-  grid-column: span 2;
-}
-
-/*media*/
-@media (min-width: 480px) and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  header img {
-    width: 90px;
-  }
-  nav ul {
-    justify-content: space-around;
-  }
-  nav li {
-    padding: 0px;
-    margin: 10px;
-  }
-  .img-banner {
-    width: 100%;
-  }
-  .titulo-servicios {
-    font-size: 35px;
-    text-align: center;
-  }
-  .main-section-container {
-    display: grid;
-    grid-template-columns: 400px 200px;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-section-container p {
-    flex: 1;
-    padding: 0px;
-    font-size: medium;
-    line-height: 2;
-    text-align: justify;
-    font-family: "Comfortaa", sans-serif;
-    font-weight: weight;
-  }
-  .main-section-container img {
-    width: 300px;
-  }
-  .iconos-fijos {
-    position: fixed; /* Fija el contenedor en la ventana del navegador */
-    bottom: 20px; /* Ajusta la distancia desde abajo */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    display: flex; /* Para que los elementos se alineen horizontalmente */
-    flex-direction: column; /* Para que los elementos se apilen verticalmente */
-    align-items: flex-end; /* Para alinear los elementos a la derecha */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
-  }
-  .iconos-fijos a {
-    background-color: #cecaca;
-    padding: 10px;
-    border-radius: 15%;
-    margin-bottom: 10px; /* Espacio entre los iconos */
-    color: #5e5b5b; /* Cambia el color de los iconos */
-    font-size: 20px; /* Tamaño de la fuente de los iconos */
-  }
-  /* Estilos para los iconos */
-  /* Cambia el color de los iconos al pasar el mouse sobre ellos */
-  .iconos-fijos a:hover {
-    color: #000000;
-    transition: 1s;
-  }
-}
 @media (max-width: 479px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  header img {
-    width: 90px;
-  }
-  nav ul {
-    padding: 0px;
-    margin: 2px;
-  }
-  nav li {
-    padding: 0px;
-    margin: 5px;
-    font-size: 15px;
-    font-weight: bold;
-  }
   .wide {
     grid-column: auto;
-  }
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .concursos-titulo div h2 {
-    font-size: 40px;
-  }
-  .img-banner {
-    width: 100%;
-  }
-  .section-div-p {
-    font-size: 20px;
-    text-align: center;
-  }
-  .section-div-titulo {
-    text-align: center;
-  }
-  .titulo-servicios {
-    font-size: 30px;
-    text-align: center;
-  }
-  .casas {
-    justify-items: center;
-  }
-  .edificios {
-    justify-items: center;
-  }
-  .diseño-de-interiores {
-    justify-items: center;
-  }
-  .casas-img {
-    width: 250px;
-  }
-  .main-section-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-section-container p {
-    flex: 1;
-    padding: 0px;
-    font-size: medium;
-    line-height: 1.5;
-    text-align: justify;
-    font-family: "Comfortaa", sans-serif;
-    font-weight: weight;
-    padding: 15px;
-  }
-  .main-section-container img {
-    display: none;
-  }
-  .iconos-fijos {
-    position: fixed; /* Fija el contenedor en la ventana del navegador */
-    bottom: 20px; /* Ajusta la distancia desde abajo */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    display: flex; /* Para que los elementos se alineen horizontalmente */
-    flex-direction: column; /* Para que los elementos se apilen verticalmente */
-    align-items: flex-end; /* Para alinear los elementos a la derecha */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
-  }
-  .iconos-fijos a {
-    background-color: #cecaca;
-    padding: 10px;
-    border-radius: 15%;
-    margin-bottom: 10px; /* Espacio entre los iconos */
-    color: #5e5b5b; /* Cambia el color de los iconos */
-    font-size: 20px; /* Tamaño de la fuente de los iconos */
-  }
-  /* Estilos para los iconos */
-  /* Cambia el color de los iconos al pasar el mouse sobre ellos */
-  .iconos-fijos a:hover {
-    color: #000000;
-    transition: 1s;
   }
 }
 /* -----------------CONTACTO.html------------------*/
@@ -411,40 +336,91 @@ header img {
   font-family: "Comfortaa", sans-serif;
   transition: 0.5s;
 }
-#titulo-contacto:hover {
-  transition: 1s;
-  color: rgb(185, 185, 185);
-}
 
-form {
+.section-form h2 {
+  color: #4e4e4e;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
+}
+.section-form form {
+  border-width: 2px;
+  border-color: rgb(143, 143, 143);
   background-color: white;
-  border-radius: 3px;
-  color: #999;
+  color: #6b6b6b;
   font-size: 1em;
   padding: 20px;
   margin: 0 auto;
   width: 300px;
 }
-form input, form textarea {
-  border: 0;
-  outline: none;
-  width: 280px;
+.section-form form p {
+  color: #acacac;
+  transition: 0.5s;
+}
+@media (min-width: 769px) {
+  .section-form form p:hover {
+    color: #000000;
+    transition: 1s;
+  }
+}
+.section-form form input {
+  background-color: rgb(255, 253, 253);
+}
+.section-form input[type=text],
+.section-form textarea {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.field {
-  border: solid 1px #ccc;
-  padding: 10px;
-}
-
-.center-content {
+.boton {
   text-align: center;
+  border: none;
+  color: #6b6b6b;
+}
+@media (min-width: 769px) {
+  .boton:hover {
+    color: #000000;
+  }
 }
 
 /* -----------------ESTUDIO.html------------------*/
 /*TITULO*/
-/*banner estudio*/
 .articulo-arquitecta {
   display: flexbox;
+}
+
+.formacion h2 {
+  color: rgb(34, 34, 34);
+  font-size: 2rem;
+}
+.formacion article {
+  border: 2px solid #6b1e1e;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: #5f1818;
+  box-shadow: 15px 15px 15px #796e6e;
+}
+.formacion article h2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.5rem;
+  color: white;
+}
+.formacion article p {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+  font-size: 1.2rem;
+  color: white;
+}
+.formacion .accordion h2 {
+  font-size: 1.5rem;
 }
 
 .estudio {
@@ -460,111 +436,95 @@ form input, form textarea {
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
-  font-size: 25px;
+  font-size: 18px;
   font-style: italic;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 /* -----------------PROYECTOS.html------------------*/
-/* titulos*/
-.proyectos-titulos {
-  font-family: "Quicksand", sans-serif;
-  justify-content: flex-start;
-  font-size: xx-large;
-  padding-left: 10px;
-  background-color: rgb(7, 6, 6);
-  color: rgb(255, 255, 255);
-  font-weight: 1000;
+.titulos-proyectos p {
+  font-size: large;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.5;
+  font-family: "Comfortaa", sans-serif;
 }
-
-.casas {
+@media (max-width: 769px) {
+  .titulos-proyectos p {
+    flex: 1;
+    padding: 0px;
+    font-size: medium;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: weight;
+    padding: 15px;
+  }
+}
+.titulos-proyectos .casas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
   justify-content: space-around;
   padding: 15px;
 }
-.casas img {
+.titulos-proyectos .casas img {
   object-fit: cover;
   width: 400px;
   border-radius: 15px;
   transition: 0.5s;
 }
-.casas img:hover {
-  width: 420px;
-  border-radius: 0;
-  transition: 1s;
+@media (min-width: 769px) {
+  .titulos-proyectos .casas img:hover {
+    transition: 1s;
+    box-shadow: 15px 15px 15px #796e6e;
+  }
 }
-
-.card-img-overlay {
+.titulos-proyectos .card-img-overlay {
   text-align: right;
 }
-.card-img-overlay .card-title {
-  color: rgb(26, 25, 25);
-  text-align: left;
-}
-.card-img-overlay .card-text {
+.titulos-proyectos .card-img-overlay .card-text {
   color: rgb(26, 25, 25);
   text-align: left;
   font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* -----------------SERVICIOS.html------------------*/
-/* BANNER ----------------------------------*/
-.banner {
-  margin: 0px;
-  padding: 0px;
+.col .card {
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
 }
-.banner img {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  object-fit: cover;
+@media (min-width: 769px) {
+  .col .card:hover {
+    background-color: rgb(68, 67, 67);
+    color: white;
+    transition: 0.5s;
+    border-color: rgb(53, 53, 53);
+  }
 }
-
-.card h5 {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
+@media (max-width: 769px) {
+  .col .card h2 {
+    font-size: 20px;
+  }
 }
-.card p {
+.col .card p {
   font-size: 25px;
   font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
   text-align: justify;
 }
-.card img {
+@media (max-width: 769px) {
+  .col .card p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.col .card img {
   object-fit: cover;
   width: 100%;
-}
-
-nav ul {
-  list-style: none; /* para quitar los puntos de la barra*/
-  display: flex; /*la barra ahora es horizontal */
-  justify-content: center;
-}
-
-nav li {
-  padding-top: 15px;
-  margin: 15px;
-  justify-content: center;
-  font-size: large;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
-  font-family: "Comfortaa", sans-serif;
-}
-
-li a {
-  text-decoration: none;
-}
-
-nav a {
-  color: rgb(0, 0, 0);
-}
-
-.main {
-  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

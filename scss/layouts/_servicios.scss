@@ -1,70 +1,41 @@
 /* -----------------SERVICIOS.html------------------*/
 
 
-/* BANNER ----------------------------------*/
-.banner{
-    margin: 0px;
-    padding: 0px;
-    img{
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        object-fit: cover;
-    }
-}
 
 
-.card{
-    h5{
-        font-size: 28px;
-        font-weight: bold;
-        text-align: center;
-    }
-    p{
-        font-size: 25px;
-        font-family: "Prata", serif;
-        font-weight: 400;
-        font-style: normal;
-        text-align: justify;
-    }
-    img{
-        object-fit: cover;
-        width: 100%;
-    }
+.col{
+    .card{
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
 
-}
-nav ul{
-    list-style: none;/* para quitar los puntos de la barra*/
-    display: flex;/*la barra ahora es horizontal */
-    justify-content: center;
-}
-nav li{
-    padding-top: 15px;
-    margin: 15px;
-    justify-content: center;
-    font-size: large;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    font-family: "Comfortaa", sans-serif;
-}
-li a{
-    text-decoration: none;
-
-}
-nav a{
-    color: rgb(0, 0, 0);
+        @media (min-width: 769px){
+            &:hover{
+                background-color: rgb(68, 67, 67);
+                color: white;
+                transition: 0.5s;
+                border-color: rgb(53, 53, 53);
+            }
+        }
+        h2{
+            @media (max-width:769px){
+                font-size: 20px;
+            }
+        }
+        p{
+            font-size: 25px;
+            font-family: "Prata", serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: justify;
+            @media (max-width:769px){
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
     
+    }
 }
-
-.main{
-    background-color: black;
-}
-
-
-
-
-
-
-
-
-
